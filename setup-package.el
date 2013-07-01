@@ -5,7 +5,7 @@
 (defvar melpa '("melpa" . "http://melpa.milkbox.net/packages/"))
 
 ;; Add marmalade to package repos
-(add-to-list 'package-archives marmalade)
+(add-to-list 'package-archives marmalade t)
 (add-to-list 'package-archives melpa t)
 
 (package-initialize)
