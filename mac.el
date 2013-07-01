@@ -6,7 +6,7 @@
 
 ;; mac friendly font
 (when window-system
-  (set-face-attribute 'default nil :font "Monaco-16"))
+  (set-face-attribute 'default nil :font "Monaco-12"))
 
 ;; keybinding to toggle full screen mode
 (global-set-key (quote [M-f10]) (quote ns-toggle-fullscreen))
