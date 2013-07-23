@@ -14,6 +14,6 @@
   (tooltip-mode -1)
   (blink-cursor-mode -1))
 
-(load-theme 'zenburn t)
+(load-theme 'cyberpunk t)
 
 (provide 'appearance)

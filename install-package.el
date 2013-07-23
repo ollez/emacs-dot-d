@@ -18,9 +18,9 @@
    (cons 'clojure-mode melpa)
    (cons 'nrepl melpa)
    (cons 'magit marmalade)
-   ;;(cons 'cyberpunk-theme melpa)
-   (cons 'zenburn-theme melpa)
-   (cons 'color-theme-solarized melpa)
+   (cons 'cyberpunk-theme melpa)
+   ;(cons 'zenburn-theme melpa)
+   ;(cons 'color-theme-solarized melpa)
 ))
 
 (condition-case nil
