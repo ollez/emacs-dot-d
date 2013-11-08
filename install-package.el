@@ -16,7 +16,7 @@
    ;;(cons 'gitconfig-mode melpa)
    ;;(cons 'gitignore-mode melpa)
    (cons 'clojure-mode melpa)
-   (cons 'nrepl melpa)
+   (cons 'nrepl marmalade)
    (cons 'magit marmalade)
    (cons 'cyberpunk-theme melpa)
    ;(cons 'zenburn-theme melpa)
