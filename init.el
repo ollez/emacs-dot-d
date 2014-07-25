@@ -25,6 +25,8 @@
 
 (require 'setup-clojure)
 
+(require 'setup-scala)
+
 (require 'setup-elisp)
 
 ;; Emacs server
@@ -32,3 +34,18 @@
 (unless (server-running-p)
   (server-start))
 (put 'upcase-region 'disabled nil)
+
+
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+
+;;(autoload 'gtags-mode "gtags" "" t)
+
+
+(require 'undo-tree)
+(global-undo-tree-mode)
+
+(define-key global-map (kbd "M-g") 'goto-line)
+
+(define-key global-map (kbd "M-c") 'comment-or-uncomment-region)
