@@ -2,11 +2,13 @@
 
 (defvar marmalade '("marmalade" . "http://marmalade-repo.org/packages/"))
 (defvar gnu '("gnu" . "http://elpa.gnu.org/packages/"))
-(defvar melpa '("melpa" . "http://melpa.milkbox.net/packages/"))
+(defvar melpa '("melpa" . "http://melpa.org/packages/"))
+(defvar gelpa '("gelpa" . "http://elpa.gnu.org/packages/"))
 
 ;; Add marmalade to package repos
 (add-to-list 'package-archives marmalade t)
 (add-to-list 'package-archives melpa t)
+(add-to-list 'package-archives gelpa t)
 
 (package-initialize)
 

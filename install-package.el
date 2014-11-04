@@ -16,7 +16,7 @@
    ;;(cons 'gitconfig-mode melpa)
    ;;(cons 'gitignore-mode melpa)
 ;   (cons 'clojure-mode melpa)
-  (cons 'scala-mode2 melpa)
+  ;;(cons 'scala-mode2 melpa)
 ;   (cons 'nrepl marmalade)
    (cons 'undo-tree melpa)
    (cons 'magit marmalade)
