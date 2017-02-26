@@ -1,36 +1,24 @@
-;; Install extensions if they're missing
-(defun init--install-packages ()
-  (packages-install
-   (cons 'exec-path-from-shell melpa)
-   ;;(cons 'magit melpa)
-   (cons 'paredit melpa)
-   ;; (cons 'move-text melpa)
-   ;;(cons 'gist melpa)
-   ;; (cons 'htmlize melpa)
-   ;; (cons 'visual-regexp melpa)
-   ;;(cons 'smartparens melpa)
-   ;; (cons 'restclient melpa)
-   ;; (cons 'elisp-slime-nav melpa)
-   ;; (cons 'slime-js marmalade)
-   ;;(cons 'git-commit-mode melpa)
-   ;;(cons 'gitconfig-mode melpa)
-   ;;(cons 'gitignore-mode melpa)
-;   (cons 'clojure-mode melpa)
-  ;;(cons 'scala-mode2 melpa)
-;   (cons 'nrepl marmalade)
-   (cons 'undo-tree melpa)
-   (cons 'magit marmalade)
-   (cons 'cyberpunk-theme melpa)
-   (cons 'markdown-mode melpa)
-   (cons 'cider melpa)
-   ;(cons 'zenburn-theme melpa)
-   ;(cons 'color-theme-solarized melpa)
-))
+; list the packages you want
+(setq package-list '(dracula-theme magit cider))
 
-(condition-case nil
-    (init--install-packages)
-  (error
-   (package-refresh-contents)
-   (init--install-packages)))
+; list the repositories containing them
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("melpa" . "http://melpa.org/packages/")
+			 ("gelpa" . "http://elpa.gnu.org/packages/")
+			 ("elpa" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")))
+
+; activate all the packages (in particular autoloads)
+(package-initialize)
+
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
 
 (provide 'install-package)
+
