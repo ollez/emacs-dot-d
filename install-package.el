@@ -1,5 +1,14 @@
 ; list the packages you want
-(setq package-list '(dracula-theme magit cider))
+(setq package-list '(magit
+		     cider
+		     exec-path-from-shell
+		     paredit
+		     rainbow-delimiters
+		     flycheck
+		     monokai-theme
+		     helm-ag
+		     undo-tree
+		     company))
 
 ; list the repositories containing them
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")

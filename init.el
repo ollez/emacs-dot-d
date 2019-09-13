@@ -32,6 +32,8 @@
 
 (require 'setup-elisp)
 
+(require 'keyboard-bindings)
+
 ;; Emacs server
 (require 'server)
 (unless (server-running-p)
@@ -49,9 +51,7 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
-(define-key global-map (kbd "M-g") 'goto-line)
 
-(define-key global-map (kbd "M-c") 'comment-or-uncomment-region)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
