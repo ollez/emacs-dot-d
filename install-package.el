@@ -4,7 +4,6 @@
 		     exec-path-from-shell
 		     paredit
 		     rainbow-delimiters
-		     flycheck
 		     monokai-theme
 		     helm-ag
 		     undo-tree

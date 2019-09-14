@@ -4,10 +4,6 @@
 	  (lambda ()
 	    (enable-paredit-mode)))
 
-(add-hook 'nrepl-interaction-mode-hook
-	  (lambda ()
-	    (nrepl-turn-on-eldoc-mode)))
-
 (setq nrepl-hide-special-buffers t)
 
 (setq nrepl-history-file "~/.emacs.d/nrepl-history")
@@ -15,6 +11,12 @@
 (add-hook 'nrepl-mode-hook 'subword-mode)
 
 (setq nrepl-hide-special-buffers t)
+
+
+
+(setq cider-prompt-for-symbol nil)
+
+
 (setq cider-save-file-on-load nil)
 
 (global-company-mode)
@@ -24,7 +26,7 @@
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'clojurescript-mode-hook 'paredit-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
-(global-flycheck-mode)
+
 
 ;; Enter cider mode when entering the clojure major mode
 (add-hook 'clojure-mode-hook 'cider-mode)

@@ -12,10 +12,6 @@
 
 (setq inhibit-startup-message t)
 
-(let ((package-directory (expand-file-name "site-lisp" user-emacs-directory)))
-  (add-to-list 'load-path user-emacs-directory)
-  (add-to-list 'load-path package-directory))
-
 (require 'system-environment)
 
 (require 'backup-settings)
