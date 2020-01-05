@@ -3,10 +3,13 @@
 		     cider
 		     exec-path-from-shell
 		     paredit
+		     aggressive-indent
 		     rainbow-delimiters
-		     monokai-theme
+		     zenburn-theme
+		     dracula-theme
 		     helm-ag
 		     undo-tree
+		     yaml-mode
 		     company))
 
 ; list the repositories containing them

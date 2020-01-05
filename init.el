@@ -42,10 +42,13 @@
 (ido-mode 1)
 
 ;;(autoload 'gtags-mode "gtags" "" t)
-
+(global-aggressive-indent-mode 1)
 
 (require 'undo-tree)
 (global-undo-tree-mode)
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 
 (custom-set-variables

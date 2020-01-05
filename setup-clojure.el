@@ -31,6 +31,8 @@
 ;; Enter cider mode when entering the clojure major mode
 (add-hook 'clojure-mode-hook 'cider-mode)
 
+(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+
 ;; Turn on auto-completion with Company-Mode
 (global-company-mode)
 (add-hook 'cider-repl-mode-hook #'company-mode)
